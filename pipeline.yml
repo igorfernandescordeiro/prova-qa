@@ -1,0 +1,9 @@
+default:
+  image: phpunit/phpunit
+  before_script: 
+    - echo "iniciando testes"
+job: 
+  script:
+    git clone https://igorfernandescordeiro:1234igor%^&@github.com/igorfernandescordeiro/prova-qa.git
+    cd prova-qa
+    phpunit tests/DominioTest.php

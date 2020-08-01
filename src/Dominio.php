@@ -1,7 +1,7 @@
 <?php
-
+ 
 final Class Dominio {
-
+     
     public $dominio;
 
     public $dominiosRegistrados;
@@ -52,7 +52,10 @@ final Class Dominio {
 
     /** Não pode conter somente números  */
     public function somenteNumeros() {
-        return is_numeric($this->dominio);
+        if(is_numeric($this->dominio) == true){
+            return false;
+        }
+        return true;
     }
 
     /** Não pode ser um domínio já registrado */
@@ -63,4 +66,28 @@ final Class Dominio {
 
         return true;
     }
+
+    /** Não iniciar por hífen */
+    public function verificarInicioHifen(){
+        $arrayString = str_split($this->dominio);
+        $primeiroValor = $arrayString[0];
+        
+        if($primeiroValor === "-"){
+            return false;
+        }
+        return true;
+    }
+
+    /** Não terminar por hífen */
+    public function verificarFimHifen(){
+        $arrayString = str_split($this->dominio);
+        $ultimoValor = $arrayString[array_key_last($arrayString)];
+
+        if($ultimoValor === "-"){
+            return false;
+        }
+        return true;
+    }
+
+
 }

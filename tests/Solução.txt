@@ -1,0 +1,31 @@
+As decisões tomadas:
+    -Criar um diretório com o nome Testes para deixar os testes em uma pasta separada.
+    -Criar uma classe Dominio adicionando o sufixo Test dentro da pasta Teste.
+    -Criar testes unitários da classe Dominio.php.
+
+Tecnologias utilizadas:    
+    -PHPUnit
+    -Visual Studio Code
+
+Implementações:
+    -Crei pelo menos um teste para cada função.
+    -Funções que contem condicionais, foi necessário criar dois ou mais testes.
+
+Como rodar:
+    -É necessário ter instalado PHP na máquina.
+        - Verificar se a variável de ambiente está configurada.
+
+    -É necessário instalar o PHPUnit  (https://phpunit.readthedocs.io/pt_BR/latest/installation.html).  
+
+    -Após tudo configurado, abriro CDM e ir até o diretório que está o projeto.
+        -digitar o comando: phpunit tests/DominioTest.php.
+
+Alterações e adições:
+    -Na função somenteNumeros() foi adicionado uma condicional para que a regra(comentário) fosse melhor atendida.
+        -/** Não pode conter somente números  */
+        - Como estava iria retornar true se tivesse somente números. Mantive a lógica anterior, mas com a condicional ela vai retornar true se não tiver somente números.
+    -Adicionei mais duas funções, uma que verifica se inicia com hífen e outra que verifica se termina com hífen.
+        -Foram criados quatro testes para essas duas funções, dois testes para cada.    
+
+
+
